@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS word-break</title>
+  <style>
+    div {
+      width: 150px;
+      border: 1px solid #000;
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px;
+    }
+
+    /* only the paragraph inside
+    the container will be selected */ 
+    .container p {
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>Break-all value</p>
+    <!-- Notice how some words are split -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis temporibus debitis recusandae vitae ratione nemo quos inventore accusantium fuga officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis temporibus debitis recusandae vitae ratione nemo quos inventore accusantium fuga officiis.</p>
+  </div>
+
+  <!-- Div with normal paragraph -->
+  <div>
+    <!-- No word is split -->
+    <p>Default behaviour</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis temporibus debitis recusandae vitae ratione nemo quos inventore accusantium fuga officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis temporibus debitis recusandae vitae ratione nemo quos inventore accusantium fuga officiis.</p>
+  </div>
+</body>
+</html>
